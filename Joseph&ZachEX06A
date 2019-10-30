@@ -1,0 +1,8 @@
+ /* Query- by Joseph Wesbrook and Zach Cramer and AVG Subquerie */
+SELECT HoursWorked, EmployeeNumber, ProjectID
+FROM assignment
+WHERE HoursWorked >
+ (SELECT AVG(HoursWorked)
+ FROM assignment)
+ORDER BY HoursWorked;
+
